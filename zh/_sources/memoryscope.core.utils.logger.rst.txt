@@ -1,0 +1,7 @@
+memoryscope.core.utils.logger module
+====================================
+
+.. automodule:: memoryscope.core.utils.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:

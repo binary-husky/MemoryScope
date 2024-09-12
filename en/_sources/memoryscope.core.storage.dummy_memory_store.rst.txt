@@ -1,0 +1,7 @@
+memoryscope.core.storage.dummy\_memory\_store module
+====================================================
+
+.. automodule:: memoryscope.core.storage.dummy_memory_store
+   :members:
+   :undoc-members:
+   :show-inheritance:

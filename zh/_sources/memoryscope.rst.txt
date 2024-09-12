@@ -1,0 +1,21 @@
+memoryscope package
+===================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   memoryscope.constants
+   memoryscope.core
+   memoryscope.enumeration
+   memoryscope.scheme
+
+Module contents
+---------------
+
+.. automodule:: memoryscope
+   :members:
+   :undoc-members:
+   :show-inheritance:

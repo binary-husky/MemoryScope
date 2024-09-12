@@ -1,0 +1,7 @@
+memoryscope.core.chat.cli\_memory\_chat module
+==============================================
+
+.. automodule:: memoryscope.core.chat.cli_memory_chat
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+memoryscope.core.utils.timer module
+===================================
+
+.. automodule:: memoryscope.core.utils.timer
+   :members:
+   :undoc-members:
+   :show-inheritance:

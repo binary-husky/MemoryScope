@@ -1,0 +1,19 @@
+memoryscope.core.config package
+===============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   memoryscope.core.config.arguments
+   memoryscope.core.config.config_manager
+
+Module contents
+---------------
+
+.. automodule:: memoryscope.core.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

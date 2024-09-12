@@ -1,0 +1,7 @@
+memoryscope.core.worker.memory\_manager module
+==============================================
+
+.. automodule:: memoryscope.core.worker.memory_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:

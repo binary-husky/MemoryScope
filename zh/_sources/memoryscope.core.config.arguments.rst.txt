@@ -1,0 +1,7 @@
+memoryscope.core.config.arguments module
+========================================
+
+.. automodule:: memoryscope.core.config.arguments
+   :members:
+   :undoc-members:
+   :show-inheritance:
