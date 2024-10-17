@@ -1,4 +1,6 @@
 <!-- layout.html -->
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -7,26 +9,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Installing MemoryScope &mdash; MemoryScope  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c9484b72" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="The Cli Interface of MemoryScope" href="../examples/cli/CLI_README.html" />
-    <link rel="prev" title="MemoryScope (Fork)" href="../README.html" /> 
+    <link rel="prev" title="MemoryScope" href="../README.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,8 +54,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">About MemoryScope</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#i-install-with-docker-recommended">I. Install with docker [Recommended]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ii-install-with-docker-compose-recommended">II. Install with docker compose [Recommended]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-install-with-docker-recommended-x86-64">I. Install with docker [Recommended] [x86_64]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ii-install-with-docker-compose-recommended-x86-64">II. Install with docker compose [Recommended] [x86_64]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#iii-install-from-pypi">III. Install from PyPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#iv-install-from-source">IV. Install from source</a></li>
 </ul>
@@ -106,8 +104,8 @@
              
   <section id="installing-memoryscope">
 <h1>Installing MemoryScope<a class="headerlink" href="#installing-memoryscope" title="Link to this heading"></a></h1>
-<section id="i-install-with-docker-recommended">
-<h2>I. Install with docker [Recommended]<a class="headerlink" href="#i-install-with-docker-recommended" title="Link to this heading"></a></h2>
+<section id="i-install-with-docker-recommended-x86-64">
+<h2>I. Install with docker [Recommended] [x86_64]<a class="headerlink" href="#i-install-with-docker-recommended-x86-64" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Clone the repository and edit settings</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone project</span>
@@ -123,15 +121,21 @@ vim<span class="w"> </span>memoryscope/core/config/demo_config.yaml
 </pre></div>
 </div>
 </li>
-<li><p>Launch Docker container</p>
+<li><p>Launch Docker container (ARM architecture not yet supported)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--net<span class="o">=</span>host<span class="w"> </span>memoryscope
 </pre></div>
 </div>
 </li>
 </ol>
+<blockquote>
+<div><p>[!Important]
+To inspect memory shift during the conversation, modify command in step 3 to <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--name=memoryscope_container</span> <span class="pre">--rm</span> <span class="pre">--net=host</span> <span class="pre">memoryscope</span></code>;<br/>
+Then start a new terminal window and execute <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">-it</span> <span class="pre">memoryscope_container</span> <span class="pre">python</span> <span class="pre">quick-start-demo.py</span> <span class="pre">--config_path=memoryscope/core/config/demo_config_zh.yaml</span></code>;<br/>
+In the second window, input <code class="docutils literal notranslate"><span class="pre">/list_memory</span> <span class="pre">refresh_time=5</span></code> to inspect memory</p>
+</div></blockquote>
 </section>
-<section id="ii-install-with-docker-compose-recommended">
-<h2>II. Install with docker compose [Recommended]<a class="headerlink" href="#ii-install-with-docker-compose-recommended" title="Link to this heading"></a></h2>
+<section id="ii-install-with-docker-compose-recommended-x86-64">
+<h2>II. Install with docker compose [Recommended] [x86_64]<a class="headerlink" href="#ii-install-with-docker-compose-recommended-x86-64" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><p>Clone the repository and edit settings</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone project</span>
@@ -147,7 +151,7 @@ vim<span class="w"> </span>memoryscope/core/config/demo_config.yaml
 </pre></div>
 </div>
 </li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">memory_scope_main</span></code> to build and launch the memory-scope cli interface.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">memory_scope_main</span></code> to build and launch the memory-scope cli interface. (ARM architecture not yet supported)</p></li>
 </ol>
 </section>
 <section id="iii-install-from-pypi">
@@ -241,7 +245,7 @@ python<span class="w"> </span>quick-start-demo.py<span class="w"> </span>--confi
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../README.html" class="btn btn-neutral float-left" title="MemoryScope (Fork)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../README.html" class="btn btn-neutral float-left" title="MemoryScope" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../examples/cli/CLI_README.html" class="btn btn-neutral float-right" title="The Cli Interface of MemoryScope" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

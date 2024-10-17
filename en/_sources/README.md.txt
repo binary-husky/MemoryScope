@@ -1,6 +1,6 @@
 English | [**中文**](./README_ZH.md)
 
-# MemoryScope (Fork)
+# MemoryScope
 <p align="center">
  <img src="./docs/images/logo.png" alt="MemoryScopeLogo" width="75%">
 </p>
